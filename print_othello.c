@@ -17,14 +17,16 @@ int main(void){
      	print_othello[i][j] = b;    	
 	 }
 
-print_othello(함수);  // for문을 활용- N줄의 보드판을 출력하는 함수   
+print_othello(함수[][]);  // for문을 활용- N줄의 보드판을 출력하는 함수   
    
 printf("-------------------------\n");
+	int *ptr;
+	ptr =& 함수 [][];
 	for(i=0; i<N; i++)
 	{
 	 for(j=0; j<N; j++)
 	 
-    	printf("| %c ", 함수 [i][j]);
+    	printf("| %c ", *ptr);
     	
 	 	
 	printf("|\n");	
