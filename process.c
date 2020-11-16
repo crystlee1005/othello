@@ -10,17 +10,11 @@ char w = 'O';  // 하얀색 알
 char x = ' ';	   
 
 // 출력 함수
-
-//------ 아래 글은 신경 x , 혹시 몰라서 남겨둠ㅎ  
-  //gameboard[N/2][N/2] = b;
-   //gameboard[N/2][N/2 + 1] = w;
-   //gameboard[N/2 + 1][N/2] = w;
-   //gameboard[N/2 + 1][N/2 + 1] = b;	 
-char print_othello (char a[N][N]){
-     a[N][N];
+	 
+void print_othello (char a[N][N]){
+	 
 	 char *p;
-	    
-	   
+	 	     
      p = &a[0][0]; // 포인터 p를 배열 a의 [0][0]번째 요소로  초기화  
      
      
@@ -39,22 +33,24 @@ char print_othello (char a[N][N]){
 }
 
 	    
-// 게임 초기화_ 정중앙 4칸에 흰색 검정색 알을 2개씩 대각선 모양으로 배치    
-char init_othello(char gameboard[][N])  // ---- ROW N 지울지 보류!!!!!!  
+// 게임을  초기화 하는 함수__ 정중앙 4칸에 흰색 검정색 알을 2개씩 대각선 모양으로 배치    
+char init_othello(char a[N][N])   
 {  
     	 
-	 for(i=0; i<N; i++)
+	 for(i=0; i<N; i++){
      
-	 for(j=0; j<N; j++) 
+	 for(j=0; j<N; j++){
+	 
      	     		   
-    if ((i == N/2 && j == N/2) || ( i == N/2 +1 && j == N/2 +1))
-      gameboard[i][j] = b; 
-    else if ((i==N/2 && j ==N/2 + 1) ||(i == N/2 + 1 && j == N/2))
-      gameboard[i][j] = w;
+    if ((a[i][j] == a[N/2][N/2]) || (a[i][j] == a[N/2 + 1][N/2 + 1]))
+      a[i][j] = b; 
+    else if ((a[i][j] == a[N/2][N/2 + 1]) ||(a[i][j] == a[N/2 + 1][N/2]))
+      a[i][j] = w;
 
-    else gameboard[i][j]= x;
-
-
+    else a[i][j]= x;
+    }
+	}
+	
 }
 
 // 메인 함수_ 필요한 함수 호출  ----    
@@ -63,8 +59,8 @@ void main() {
     printf("-> black stone : @\n"); //검정색 돌과 하얀색 돌이 무엇인지 알려주는 문장 출력  
     printf("-> white stone : O\n");	 
 	 
-	 init_othello;   // 초기 오델로 함수 호출 
-	 print_othello(init_othello);  // 출력함수 호출
+	 init_othello(gameboard);   // 초기 오델로 함수 호출 
+	 print_othello(init_othello); //출력 함수 - 초기 오델로 함수를 출력하도록 함  
 	 
 }    
 
