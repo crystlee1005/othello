@@ -36,31 +36,31 @@ void print_othello (char a[N][N]){
 // 게임을  초기화 하는 함수__ 정중앙 4칸에 흰색 검정색 알을 2개씩 대각선 모양으로 배치    
 char init_othello(char a[N][N])   
 {  
-    	 
+    
+	 
 	 for(i=0; i<N; i++){
      
-	 for(j=0; j<N; j++){
+	 for(j=0; j<N; j++)
 	 
-     	     		   
-    if ((a[i][j] == a[N/2][N/2]) || (a[i][j] == a[N/2 + 1][N/2 + 1]))
-      a[i][j] = b; 
-    else if ((a[i][j] == a[N/2][N/2 + 1]) ||(a[i][j] == a[N/2 + 1][N/2]))
-      a[i][j] = w;
-
-    else a[i][j]= x;
-    }
-	}
-	
+	a[i][j] = b;
+   	a[(N-1)/2][(N-1)/2] = b;
+	a[(N-1)/2+1][(N-1)/2+1] = b;
+	a[(N-1)/2+1][(N-1)/2] = w;
+	a[(N-1)/2][(N-1)/2+1] = w;
 }
+	 
+    
+	}
+
 
 // 메인 함수_ 필요한 함수 호출  ----    
 void main() { 
     printf("********othello**********\n"); // 게임시작을 알리는 문장 출력  
     printf("-> black stone : @\n"); //검정색 돌과 하얀색 돌이 무엇인지 알려주는 문장 출력  
     printf("-> white stone : O\n");	 
-	 
+	
 	 init_othello(gameboard);   // 초기 오델로 함수 호출 
-	 print_othello(init_othello); //출력 함수 - 초기 오델로 함수를 출력하도록 함  
+	 print_othello(gameboard); //출력 함수 - 초기 오델로 함수를 출력하도록 함  
 	 
 }    
 

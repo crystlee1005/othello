@@ -20,7 +20,7 @@ int main(void){
 print_othello(함수[][]);  // for문을 활용- N줄의 보드판을 출력하는 함수   
    
 printf("-------------------------\n");
-	int *ptr;
+	char *ptr;
 	ptr =& 함수 [][];
 	for(i=0; i<N; i++)
 	{
