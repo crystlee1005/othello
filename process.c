@@ -43,15 +43,16 @@ char init_othello(char a[N][N])
 	 for(j=0; j<N; j++) {
 	 	
 	 	if ((i == (N-1)/2) || (j == (N-1)/2))
-      { a[i][j] = b; }
+       a[i][j] = b; 
 	    else if ((i == (N-1)/2 -1) || (j == (N-1)/2 -1))
-	    { a[i][j] = b; }
+	    a[i][j] = b; 
     	else if ((i == (N-1)/2 -1) || (j == (N-1)/2))
-        { a[i][j] = w; }
+        a[i][j] = w; 
       	else if ((i == (N-1)/2) || (j == (N-1)/2 -1))
-        { a[i][j] = w; }
-       
-	    else a[i][j]= x;
+        a[i][j] = w; 
+    
+	    else 
+		a[i][j]= x;
 	 }
 	 
 	
