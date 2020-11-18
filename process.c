@@ -9,7 +9,7 @@ char b = '@';  // 검정색 알
 char w = 'O';  // 하얀색 알	
 char x = ' ';	   
 
-// 출력 함수
+// 출력 함수 
 	 
 void print_othello (char a[N][N]){
 	 
