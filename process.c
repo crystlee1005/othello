@@ -41,7 +41,7 @@ char init_othello(char a[N][N])
 	 for(i=0; i<N; i++){
      
 	 for(j=0; j<N; j++) {
-	 	
+	 	                                  //N*N 게임보드판 이므로, 배열은 [0][0] ~ [N-1][N-1] 까지 있다. 
 	 	if ((i == (N-1)/2) || (j == (N-1)/2))
        a[i][j] = b; 
 	    else if ((i == (N-1)/2 -1) || (j == (N-1)/2 -1))
