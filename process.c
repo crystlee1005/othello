@@ -8,8 +8,8 @@ int i, j;  // 필요한 변수들 선언
 char b = '@';  // 검정색 알
 char w = 'O';  // 하얀색 알	
 char x = ' ';	   
-char p = 'p';
-char q = 'q';
+
+
 // 출력 함수 
 	 
 void print_othello (char a[N][N]){
