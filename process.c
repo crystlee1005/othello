@@ -8,14 +8,15 @@ int i, j;  // 필요한 변수들 선언
 char b = '@';  // 검정색 알
 char w = 'O';  // 하얀색 알	
 char x = ' ';	   
-
+char p = 'p';
+char q = 'q';
 // 출력 함수 
 	 
 void print_othello (char a[N][N]){
 	 
-	 char *p;
+	 
 	 	     
-     p = &a[0][0]; // 포인터 p를 배열 a의 [0][0]번째 요소로  초기화  
+      // 포인터 p를 배열 a의 [0][0]번째 요소로  초기화  
      
      
  printf("-------------------------\n");
@@ -23,7 +24,7 @@ void print_othello (char a[N][N]){
 	{
 	 for(j=0; j<N; j++)
 	 
-    	printf("| %c ", *p );
+    	printf("| %c ", a[i][j] );
     	
 	 	
 	printf("|\n");	
@@ -42,13 +43,16 @@ char init_othello(char a[N][N])
      
 	 for(j=0; j<N; j++) {
 	 	                                  //N*N 게임보드판 이므로, 배열은 [0][0] ~ [N-1][N-1] 까지 있다. 
-	 	if ((i == (N-1)/2) || (j == (N-1)/2))
+	 	if ((i == (N/2-1 )&& (j == (N/2-1))))
        a[i][j] = b; 
-	    else if ((i == (N-1)/2 -1) || (j == (N-1)/2 -1))
+       
+	    else if ((i == (N/2)) && (j == (N/2)))
 	    a[i][j] = b; 
-    	else if ((i == (N-1)/2 -1) || (j == (N-1)/2))
+	    
+    	else if ((i == (N/2-1)) && (j == (N/2)))
         a[i][j] = w; 
-      	else if ((i == (N-1)/2) || (j == (N-1)/2 -1))
+        
+      	else if ((i == (N/2)) && (j == (N/2-1)))
         a[i][j] = w; 
     
 	    else 
