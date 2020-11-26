@@ -56,6 +56,8 @@ char init_othello(char a[N][N])
 		a[i][j]= x;
 	 }
 	 
+	 a[N/3]
+	 
 	
 }
 	 
@@ -81,7 +83,11 @@ void main() {
 	    printf("&& O turn &&\n");
   	   printf("the number of O: \n");
   	   printf("input coordinates:  ");
-  	   scanf("%i", &i);
+  	   scanf("%i %i", &i, &j);
+  	   
+		 do{
+		 	
+		 }
   	   
 	   
 	    }
