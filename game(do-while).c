@@ -79,6 +79,7 @@ void main() {
 	 init_othello(gameboard);   // 초기 오델로 함수 호출 
 	 print_othello(gameboard); //출력 함수 - 초기 오델로 함수를 출력하도록 함  
      }
+  do{
   
   	 // 흰색 알의 차례일 경우  // 
 	   printf("&& O turn &&\n"); // 흰색알 player의 차례임을 알려주는 문장 출력 
@@ -103,7 +104,8 @@ void main() {
   	   gameboard[i][j]= '@';
 	   print_othello(gameboard);
 	   
-  
+}
+while(start==start);
   	 
 }    
 
